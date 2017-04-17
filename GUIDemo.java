@@ -1,6 +1,7 @@
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Color;
 
 import javax.swing.*;
 
@@ -26,7 +27,9 @@ public class GUIDemo extends JFrame
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         panel = new JPanel();
         biggerButton = new JButton("BIGGER");
+        biggerButton.setForeground(Color.red);
         smallerButton = new JButton("SMALLER");
+        smallerButton.setForeground(Color.red);
         biggerButton.addActionListener(new ButtonHandler());
         smallerButton.addActionListener(new ButtonHandler());
         add(panel);
@@ -57,7 +60,6 @@ public class GUIDemo extends JFrame
             {
                 setSize(size.width - 10, size.height - 10);
             }
-
         }
     }
 
